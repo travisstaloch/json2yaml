@@ -15,7 +15,7 @@ sh tests.sh
 ```
 
 ## Generate
-json2yaml --help prints a usage which is generated from the Usage text in  
+`json2yaml --help` prints a usage which is generated from the Usage text in  
 this file (below).  usage.go can be generated with:  
 ```sh
 cd $GOPATH/github.com/travisstaloch/json2yaml
