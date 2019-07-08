@@ -13,6 +13,7 @@ Run several conversion tests on them with:
 cd $GOPATH/github.com/travisstaloch/json2yaml/tests
 sh tests.sh
 ```
+This will run each of the examples at the bottom of Usage below  
 
 ## Generate
 `json2yaml --help` prints a usage which is generated from the Usage text in  
