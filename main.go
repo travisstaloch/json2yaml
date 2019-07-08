@@ -15,27 +15,6 @@ import (
 
 type converter func([]byte) ([]byte, error)
 
-const (
-	usageDefault = `
-Usage: json2yaml [OPTION?] [FILENAME*]
-Convert between json and yaml formats.
-Input(s) supplied by stdin or as FILENAME(s).
-If format is given, all files will be converted to format.
-Otherwise .json files are converted to yaml and .yaml to json.
-
-OPTION:
-	-f --format {yaml (default), json} : examples: --f=yaml -format json
-
-examples:
-  $ cat 1.json | json2yaml
-  $ cat 1.yaml | json2yaml -format json | tee file.json
-  $ echo {"a": 1, "b": 2} | json2yaml -f yaml
-  $ printf "a: 1\\nb: 2" | json2yaml --f json
-  $ json2yaml file.json 2.yaml | tee file.yaml
-  $ json2yaml -f=json file.yaml 2.json
-`
-)
-
 func main() {
 	const (
 		fmtU  = "Output format (json or yaml)"
@@ -45,12 +24,7 @@ func main() {
 	flag.StringVar(&format, "format", "<empty>", fmtU)
 	flag.StringVar(&format, "f", "<empty>", fmtU+short)
 	flag.Usage = func() {
-		pkgusage := usage()
-		if len(pkgusage) > 0 {
-			fmt.Println(pkgusage)
-		} else {
-			fmt.Println(usageDefault)
-		}
+		fmt.Println(usage)
 		os.Exit(0)
 	}
 	flag.Parse()

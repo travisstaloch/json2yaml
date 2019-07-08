@@ -25,9 +25,9 @@ func main() {
 var packageTemplate = template.Must(template.New("").Parse(`
 package main
 
-func usage() string {
-	return ` + "`" + `{{ .S }}` + "`" + `
-}
+const(
+	usage = ` + "`" + `{{ .S }}` + "`" + `
+)
 `))
 
 func check(e error) {
