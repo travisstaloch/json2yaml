@@ -13,21 +13,20 @@ json2yaml 1.json # prints equivalent yaml
 
 ## Test
 There are a few simple json and yaml files in the tests directory.  
-Run several conversion tests on them with:  
+Run the examples in Usage (below):  
 ```sh
 cd $GOPATH/github.com/travisstaloch/json2yaml/tests
 sh tests.sh
 ```
-This will run each of the examples at the bottom of Usage below  
+
 
 ## Generate
-`json2yaml --help` prints a usage which is generated from the Usage text in  
-this file (below).  usage.go can be generated with:  
+`json2yaml --help` prints usage which is generated from the Usage text  
+(below).  usage.go can be generated with:  
 ```sh
 cd $GOPATH/github.com/travisstaloch/json2yaml
 go generate
-# apply changes to json2yaml executable
-go install
+go install # apply changes to json2yaml executable
 ```
 
 ## Usage  
