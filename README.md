@@ -6,6 +6,11 @@ Convert between json and yaml formats.  Input on stdin or by filename arguments.
 go get github.com/travisstaloch/json2yaml
 ```
 
+## Run
+```sh
+json2yaml 1.json # prints equivalent yaml
+```
+
 ## Test
 There are a few simple json and yaml files in the tests directory.  
 Run several conversion tests on them with:  
