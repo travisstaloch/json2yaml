@@ -1,0 +1,8 @@
+{
+  "name": "John",
+  "age": 30,
+  "dob": null,
+  "hunger": 5.6,
+  "ns": [1,2],
+  "fruits": {"apples": 1, "banannas": 2}
+}
