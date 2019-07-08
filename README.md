@@ -21,6 +21,8 @@ this file (below).  usage.go can be generated with:
 ```sh
 cd $GOPATH/github.com/travisstaloch/json2yaml
 go generate
+# apply changes to json2yaml executable
+go install
 ```
 
 ## Usage  
